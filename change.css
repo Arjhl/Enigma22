@@ -1,0 +1,30 @@
+
+.just{
+
+    height:15vh;
+}
+.just-flex{
+    display: flex;
+    font-size: 2em;
+    align-items: center;
+}
+
+@media (max-width:600px) {
+    .just-flex{
+        padding-top: 10px;
+        flex-direction: column;
+        font-size: .9em;
+    }
+    .just{
+        height: 13vh;
+    }
+    .home{
+        justify-content: center;
+        /* gap:20px; */
+        top:10vh;
+        height: 100vh;
+        margin-bottom: 10vh;
+        
+        /* border: 2px solid red; */
+    }
+}

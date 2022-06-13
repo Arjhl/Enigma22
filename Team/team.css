@@ -1,0 +1,308 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital@1&family=Roboto:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono@1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Proza+Libre&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata&display=swap');
+:root{
+    --primary:#f000ff;
+    --dark:#EEEEEE;
+    --light:#000;
+}
+html{
+    scroll-behavior: smooth;
+}
+@font-face {
+    font-family:custom;
+    src: url(Helvetica\ LT\ 75\ Bold\ Outline.ttf);
+    font-style: none;
+    font-weight: 500;
+}
+@font-face {
+    font-family: gilroy;
+    src: url(Gilroy-SemiBold.ttf);
+}
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Fira sans' , sans-serif;
+}
+body{
+    /* border: 2px solid red; */
+    margin:0 5vw;
+    /* background-image: url(elcarito-MHNjEBeLTgw-unsplash\(1\).jpg); */
+    
+    /* background: rgb(181,248,246);
+    background: linear-gradient(90deg, rgba(181,248,246,1) 9%, rgba(0,212,255,1) 88%); */
+    /* background-color: #EEEEEE; */
+    background-color: #fde7f9;
+background-image: linear-gradient(90deg, #fde7f9 0%, #aacaef 74%);
+
+
+    background-attachment: cover;
+    /* z-index:-99; */
+    /* background-image: url(pawel-czerwinski-W10XfpqLu4Y-unsplash.jpg); */
+    /* background-position; */
+    background-repeat: no-repeat;
+    /* background-color:#000; */
+    /* overflow-x: hidden; */
+    overflow-y: visible;
+    scroll-snap-type: y proximity;
+    color:var(--light);
+}
+
+.container{
+    scroll-snap-align: start;
+    /* max-width: 1280px;
+    margin:0 auto; */
+    margin:0 5vw;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+nav{
+    position: fixed;
+    top:0;
+    left:0;
+    right:0;
+    z-index: 99;
+    /* background-color:transparent; */
+    background-color: #fde7f9;
+background-image: linear-gradient(90deg, #fde7f9 0%, #aacaef 74%);
+
+    transition: background-color 250ms ease-in;
+    /* padding: 16px 32px; */
+    /* border-bottom: 3px solid var(--primary); */
+}
+header img{
+    height:12vh;
+    padding-top: 13px 0;
+
+    /* border: 2px solid red; */
+}
+header {
+    max-width:50%;
+    display: flex;
+    flex-basis: 100%;
+    justify-content: space-between;
+}
+
+.nav.scrolled {
+    background-color:#fff;
+    transition: background-color 250ms ease-in;
+}
+.hamburger{
+    display: block;
+    position: absolute;
+    padding: 16px 32px;
+    top:0;
+    right:0;
+    z-index: 1;
+    user-select: none;
+    appearance: none;
+    border: none;
+    outline: none;
+    background: none;
+    cursor: pointer;
+}
+.hamburger span{
+    display: block;
+    width:33px;
+    height:4px;
+    margin-bottom: 5px;
+    position: relative;
+
+    background-color: var(--light);
+    border-radius: 6px;
+    z-index: 1;
+
+    transform-origin:0 0;
+    transition:0.4s;
+
+}
+
+.hamburger:hover span:nth-child(2){
+    transform: translateX(10px);
+    background-color: var(--primary);
+}
+
+.hamburger.is-active span:nth-child(1){
+    transform:translate(0px,-2px) rotate(45deg) ;
+}
+.hamburger.is-active span:nth-child(2){
+    opacity: 0;
+    transform: translateX(15px);
+}
+
+.hamburger.is-active span:nth-child(3){
+    transform:translate(-3px,3px) rotate(-45deg) ;
+}
+
+.nav-l{
+    display:none;
+   
+}
+.nav-l li a:hover{
+    color:var(--primary);
+
+}
+.navlists{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    height: 80%;
+    width: 100%;
+    list-style: none;
+    /* background-color: #212121; */
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu{
+    background-color: #fde7f9;
+    background-image: linear-gradient(90deg, #fde7f9 0%, #aacaef 74%);
+
+    width:100%;
+    height:40vh;
+}
+.nav-l li a{
+    color:#000 ;
+    margin: 0 16px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: 0.4s;
+    padding: 8px 16px;
+    /* border: 2px solid red; */
+
+}
+
+
+@media (min-width:900px)  {
+    header{
+        flex-basis:30% ;
+    }
+   
+    .hamburger{
+        display: none;
+    }
+    .nav-l{ 
+        flex: 1 1 0%;
+        justify-content: flex-end;
+        margin: 0 -16px; 
+        display: flex;
+        /* flex-direction: column; */
+        list-style: none;
+        
+        justify-content: space-between;
+        align-items: center;
+    }
+    .menu{
+        display: none;
+    }
+
+}
+h2{
+    -webkit-text-fill-color: transparent; /* Will override color (regardless of order) */
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: var(--primary);
+    position: relative;
+    margin-top:20vh;
+    font-size: 3em;
+    font-family: gilroy;
+    color:var(--primary);
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+	width: 15vw;
+	height: 42vh;
+    margin: 5vh;
+	/* background: linear-gradient(150deg, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0) 100%); */
+    /* background-color:rgba(red, green, blue, alpha); */
+	/* box-shadow: rgb(255 255 255 / 30%) 0px 0px 0px 0.5px inset;
+	border-radius: 20px;
+	backdrop-filter: blur(25px); */
+
+    background: rgba(255, 255, 255, 0.19);
+border-radius: 16px;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(5px);
+-webkit-backdrop-filter: blur(5px);
+border: 1px solid rgba(255, 255, 255, 0.3);
+}
+.card img{
+    border-radius: 30px;
+    border: 2px solid var(--dark);
+    height:20vh;
+    top:3vh;
+    /* left:2.5vw; */
+    width:10vw;
+    position: relative;
+    
+    transform: scale(1);
+    transition: transform 0.4s ease-in-out;
+    filter:grayscale(0%);
+}
+.card img:hover{
+    filter:grayscale(100%);
+    transform: scale(.95);
+}
+h4{
+    align-self: center;
+    margin-top: 5vh;
+    opacity: .8;
+    font-size: 1.8em;
+    font-family: gilroy;
+    letter-spacing: .1em;
+    text-align: center;
+}
+.role{
+    opacity: .7;
+    font-size: 1.1em;
+    font-weight: 500;
+    text-align: center;
+}
+p{
+    font-family: gilroy;
+}
+p a{
+    color: #212121;;
+    text-decoration: none;
+}
+.back{
+    /* margin:0; */
+    /* height:100vh; */
+    display: flex;
+    justify-content: space-between;
+    margin-bottom:5vh;
+}
+
+@media(max-width:600px){
+    body{
+        background-repeat: repeat-y;
+    }
+    header img{
+        padding-top:5px;
+        height:7vh;
+    }
+    .back{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .card{
+        width:70vw;
+        height:40vh;
+    }
+    .card img{
+        width:auto;
+        max-height:20vh;
+        
+    }
+    h2{
+        margin-top: 15vh;
+        text-align: center;
+    }
+}

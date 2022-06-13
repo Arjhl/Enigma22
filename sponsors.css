@@ -1,0 +1,15 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+:root{
+    --primary:#8c38ff;
+    --light:#EEEEEE;
+    --dark:#212121;
+}
+.spontext{
+    /* text-align: left; */
+    padding:5vh 0;
+}
+
